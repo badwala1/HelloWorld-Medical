@@ -1,0 +1,2 @@
+gender,age,hypertension,heart_disease,smoking_history,bmi,HbA1c_level,blood_glucose_level,diabetes,
+0.04,0.26,0.2,0.17,0.07,0.21,0.4,0.42,1,Correl
