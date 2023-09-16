@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap');
+
+
+
+#upperlogo{
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+#mainheading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 80px;
+    color: #313E53;
+}
+
+#info1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 40px;
+    color: #313E53;
+}
