@@ -1,27 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@200;400;500;600;800&display=swap');
 
-
-
-#upperlogo{
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
+body {
+    font-family: 'Inter', sans-serif;
 }
 
-#mainheading {
-    font-family: 'Montserrat', sans-serif;
+.navbar {
+    overflow: hidden;
+    /* float: left; */
+}
+
+.navbar img {
+    float: left;
+    width: 125px;
+    margin-top: 35px;
+    margin-left: 45px;
+}
+
+.navbar h1 {
+    float: left;
     font-weight: 600;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 80px;
-    color: #313E53;
+    font-size: 60px;
+    margin-left: 50px;
+    margin-top: 60px;
+    color: black;
 }
 
-#info1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    margin-top: 25px;
-    font-size: 40px;
-    color: #313E53;
+.navbar button {
+    font-weight: 500;
+    font-size: 35px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: white;
+    border: 1px #05D5A4;
+
+    background: #05D5A4;
+    margin-left: 600px;
+    margin-top: 55px;
+}
+
+.main {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.main img {
+    width:100%;
+    height:100%;
+}
+
+.choose {
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.choose h1 {
+    margin-left: 45px;
+}
+
+.choose input {
+    margin-left: 45px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-color: black;
+    border: 10px solid black;
+}
+
+.choose label {
+
 }
