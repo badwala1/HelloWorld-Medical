@@ -35,13 +35,16 @@
 </head>
 <body>
     <h1>Random Forest Model in JavaScript</h1>
+    
     <script>
+        const inputform = document.getElementsByClassName('disease-responses')[whole_number].value
+        
         async function loadModel() {
             // Load the trained model (e.g., in joblib or pickle format)
-            const model = await tf.loadLayersModel('random_forest_model.json'); // Load your model here
+            const model = await tf.loadLayersModel('random_forest_dbs.joblib'); // Load your model here
 
             // Prepare input data as a tensor
-            const inputData = tf.tensor2d([[1, 2, 3, 4]]); // Replace with your data
+            const inputData = tf.tensor2d(inputform); // Replace with your data
             
             // Make predictions
             const predictions = model.predict(inputData);
