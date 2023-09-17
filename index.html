@@ -28,45 +28,40 @@
         <label for="Obesity">Obesity</label><br>
     </div>
     <form id = "obesity-responses" onsubmit="return loadModel();">
-        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/>
-        <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField"/>
-        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/>
-        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/>
-        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/>
+        <label for="Obesity">Input AGE</label><br>
+        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/><br>
+        <label for="Obesity">Input GENDER (true = male, false = female)</label><br>
+        <input name="searchTxt" type="text" maxlength="512" id="searchTxt" class="searchField"/><br>
+        <label for="Obesity">Input HEIGHT</label><br>
+        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/><br>
+        <label for="Obesity">Input WEIGHT</label><br>
+        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/><br>
+        <label for="Obesity">Input BMI</label><br>
+        <input name="searchTxt" type="number" maxlength="512" id="searchTxt" class="searchField"/><br>
         <input type="submit" value="Submit">
-    </form>
-    <html>
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-</head>
-<body>
-    <div class="control">
-        <button id="submit" class="button is-large is-fullwidth is-primary is-outlined">
-            Calculate
-        </button>
-    </div>
+    </form>    
+    <body>
+        <script>
+            async function loadModel() {
     
-    <script>
-        async function loadModel() {
-
-            const ob = [[0,0,0,0,0]]
-            const obesity = document.getElementsByClassName('obesity-responses')[whole_number].value
-            for(let i = 0; i < obesity.length; i++)
-            {
-                ob[i] = obesity[i]
+                const ob = [[0,0,0,0,0]]
+                const obesity = document.getElementsByClassName('obesity-responses')[whole_number].value
+                for(let i = 0; i < obesity.length; i++)
+                {
+                    ob[i] = obesity[i]
+                }
+                // Load the trained model (e.g., in joblib or pickle format)
+                const model = await tf.loadLayersModel('random_forest_obs.joblib'); // Load your model here
+    
+                // Prepare input data as a tensor
+                const inputData = tf.tensor2d(inputform); // Replace with your data
+                
+                // Make predictions
+                const predictions = model.predict(inputData);
+                predictions.print(); // Print the predictions to the console
+                return predictions
             }
-            // Load the trained model (e.g., in joblib or pickle format)
-            const model = await tf.loadLayersModel('random_forest_obs.joblib'); // Load your model here
-
-            // Prepare input data as a tensor
-            const inputData = tf.tensor2d(inputform); // Replace with your data
-            
-            // Make predictions
-            const predictions = model.predict(inputData);
-            predictions.print(); // Print the predictions to the console
-        }
-    </script>
-</body>
-</html>
+        </script>
+    </body>
 </body>
 </html>
